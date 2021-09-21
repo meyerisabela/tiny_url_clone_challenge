@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.6'
 
+# To create simple form with bootstrap
+gem 'simple_form'
 # To generate token from long url
 gem 'base64'
 # To fake data for tests and seeds if needed
