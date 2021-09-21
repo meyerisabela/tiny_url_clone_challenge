@@ -1,0 +1,14 @@
+<div class="container mt-5">
+  <div class="w-50 mx-auto text-center">
+    <h1 class="mb-5">Your url info:</h1>
+
+    <div class="text-left">
+      <p>Original url: <%= @url.original_url %></p>
+      <p>Your new tiny url: <%= ENV['SERVER_URL'] %>/<%= @url.token %></p>
+
+      <%= link_to "Go to my page!", token_page_path(@url.token), target: "blank", class: "btn btn-secondary" %>
+    </div>
+  </div>
+</div>
+
+# /:token/info # info about URL and visitor count
