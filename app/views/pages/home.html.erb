@@ -1,2 +1,10 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container mt-5">
+  <div class="w-50 mx-auto text-center">
+    <h1 class="mb-5">How about turning your GIANT url into a tiny one?</h1>
+
+    <%= simple_form_for @url do |f| %>
+      <%= f.input :original_url, label: false %>
+      <%= f.submit "Give me cool tiny url!", class: "w-100 btn btn-secondary" %>
+    <% end %>
+  </div>
+</div>
