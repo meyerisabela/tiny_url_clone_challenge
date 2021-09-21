@@ -3,6 +3,8 @@ class Url < ApplicationRecord
 
   validates_presence_of :original_url
 
+  serialize :ips
+
   def token_generator
     self.token = Token::TokenGenerator.new(original_url).generate_token
   end
