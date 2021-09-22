@@ -13,8 +13,19 @@ class UrlsController < ApplicationController
   end
 
   def redirect
-    @url = Url.find_by_token(params[:token])
-    redirect_to token_page_path(@url.token)
+    ip = Ip::GetUserIp.new.get_ip
+    url = Url.find_by_token(params[:token])
+    url.visitors_count += 1
+
+    if url.ips&.keys&.include?(ip)
+      url.ips[ip] = url.ips[ip] + 1
+    else
+      url.ips[ip] = 1
+    end
+
+    url.save
+
+    redirect_to token_page_path(url.token)
   end
 
   private
