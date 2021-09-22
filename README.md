@@ -1,24 +1,7 @@
-# README
+# This application consistes in getting a long url from an user and generating a tiny one with 8 characters.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  * To run this app in your machine just run the following:
+  run `git clone <project>` to clone the repository
+  run `bundle & yarn install`
+  run `rails db:create db:migrate` to create the db and migrate the migration files
+  run `rails s` to start the server run in port 3000
