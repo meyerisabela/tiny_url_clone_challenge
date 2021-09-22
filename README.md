@@ -6,4 +6,5 @@
   run `git clone <project>` to clone the repository
   run `bundle & yarn install`
   run `rails db:create db:migrate` to create the db and migrate the migration files
+  create .env file with SERVER_URL for now
   run `rails s` to start the server run in port 3000
